@@ -106,7 +106,8 @@ app.post("/webhook", async (req, res) => {
         }
 
         // Send DM to EVERY comment
-        const message = DB.dm_text || "Thanks for commenting ✅";
+        const message = DB.dm_text || CONFIG.DM_TEXT;
+
         await sendPrivateReply(comment_id, message);
 
         DB.sent_keys[key] = Date.now();
