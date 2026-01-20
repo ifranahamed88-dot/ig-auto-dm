@@ -2,7 +2,7 @@
 
 export const CONFIG = {
   VERIFY_TOKEN: "ifran123",
-  ADMIN_PASSWORD: "ifran233",
+  ADMIN_PASSWORD: "123",
 
   // ⚠️ Replace TEMP later with real Page Access Token
   PAGE_ACCESS_TOKEN: "TEMP",
