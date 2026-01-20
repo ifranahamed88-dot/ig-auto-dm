@@ -6,10 +6,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ===== REQUIRED ENV =====
-const VERIFY_TOKEN = process.env.VERIFY_TOKEN;           // your webhook verify token
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN; // page token with IG perms
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;       // dashboard password
+import { CONFIG } from "./config.js";
 
+const VERIFY_TOKEN = process.env.VERIFY_TOKEN || CONFIG.VERIFY_TOKEN;
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN || CONFIG.PAGE_ACCESS_TOKEN;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || CONFIG.ADMIN_PASSWORD;
 
 // ===== SIMPLE STORAGE (JSON FILE) =====
 const DATA_FILE = "./data.json";
